@@ -66,6 +66,7 @@ namespace k8s
             CaCerts = config.SslCaCerts;
             SkipTlsVerify = config.SkipTlsVerify;
             InitializeFromConfig(config);
+            Console.WriteLine("Uri: ", BaseUri.AbsoluteUri.ToString());
         }
 
         private void ValidateConfig(KubernetesClientConfiguration config)
