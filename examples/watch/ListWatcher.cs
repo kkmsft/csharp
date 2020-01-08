@@ -12,29 +12,38 @@ using System;
 
 namespace informers
 {
-    public delegate Task<HttpOperationResponse<T>> ListerD<T>(string namespaceParameter, string apiVersionParameter, string kindParameter, CancellationToken cancellationToken, bool watch);
-    public delegate Watcher<T> WatcherD<T, L>(Action<WatchEventType, T> onEvent, Action<Exception> onError, Action onClosed);
+    public delegate Task<HttpOperationResponse<L>> ListerD<T, L>();
+    public delegate Watcher<T> WatcherD<T, L>(Action<WatchEventType, T> onEvent, Action<Exception> onError = null, Action onClosed = null);
 
     public class ListWatcher<T, L>
-    {
-        
-        //public delegate Task ListerD(IKubernetes c, string ns, string version, string kind, CancellationToken t, bool watch);
-
-        public ListerD<T> Lister;
+    {           
+        public ListerD<T, L> Lister;
         public WatcherD<T,L> Watcher;
-        string _apiVersion;
+       
         string _nameSpace;
-        string _kindParameter;
-        CancellationToken _cancellationToken;   
         
-        public ListWatcher(IKubernetes client) {                  
-            Lister = delegate(string nameSpace, string apiVersion, string kindParameter, CancellationToken cancellationToken, bool watch) 
-                    { 
-                        return client.List<T>(_nameSpace, _apiVersion, _kindParameter, _cancellationToken, false);
+        CancellationToken _cancellationToken;   
+        public ListWatcher(IKubernetes client) {
+            var nameSpace = "default";
+            var cancellationToken = new CancellationToken();
+            init(client, nameSpace, cancellationToken);
+        }
+
+        public ListWatcher(IKubernetes client, string kubeNamespace, CancellationToken cancellationToken) {
+            init(client, kubeNamespace, cancellationToken);
+        }
+        
+        private void init(IKubernetes client, string kubeNamespace, CancellationToken cancellationToken) {
+            _nameSpace = kubeNamespace.ToLower();
+            _cancellationToken = cancellationToken;
+            Lister = delegate() { 
+                        return client.List<T, L>(_nameSpace, _cancellationToken, false);
                     };
             Watcher = delegate(Action<WatchEventType, T> onEvent, Action<Exception> onError, Action onClosed)
                     {
-                        return client.List<T>("default", "v1", "pods", watch:true).Watch(onEvent, onError, onClosed);                         
+                        var l = client.List<T, L>(_nameSpace, _cancellationToken, watch:true);
+                        Console.WriteLine("About to watch");
+                        return l.Watch(onEvent, onError, onClosed);                         
                     };
         }
     }        

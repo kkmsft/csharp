@@ -40,7 +40,7 @@ namespace k8s
         /// </summary>
         ServiceClientCredentials Credentials { get; }
 
-        Task<HttpOperationResponse<T>> List<T>(string namespaceParameter, string apiVersionParameter, string kindParameter, CancellationToken cancellationToken=default(CancellationToken), bool? watch = default(bool?));
+        Task<HttpOperationResponse<L>> List<T, L>(string namespaceParameter, CancellationToken cancellationToken=default(CancellationToken), bool? watch = default(bool?));
 
         /// <summary>
         /// get available API versions
