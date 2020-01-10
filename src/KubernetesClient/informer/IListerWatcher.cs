@@ -7,9 +7,5 @@ using Microsoft.Rest;
 
 namespace k8s
 {
-    public  interface IListerWatcher
-    {      
-   //     Task<HttpOperationResponse<List<IKubernetesObject>>> List(string namespace);
-    //    Watcher<T> Watcher<T>();
-    }
+
 }

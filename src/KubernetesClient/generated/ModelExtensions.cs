@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Reflection;
+
 namespace k8s.Models
 {
     public partial class V1MutatingWebhookConfiguration : IKubernetesObject, IKubernetesTypes
@@ -7,7 +10,7 @@ namespace k8s.Models
         private const string kubeGroup = "admissionregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1MutatingWebhookConfigurationList : IKubernetesObject, IKubernetesTypes
@@ -17,7 +20,7 @@ namespace k8s.Models
         private const string kubeGroup = "admissionregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ValidatingWebhookConfiguration : IKubernetesObject, IKubernetesTypes
@@ -27,7 +30,7 @@ namespace k8s.Models
         private const string kubeGroup = "admissionregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ValidatingWebhookConfigurationList : IKubernetesObject, IKubernetesTypes
@@ -37,7 +40,7 @@ namespace k8s.Models
         private const string kubeGroup = "admissionregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1MutatingWebhookConfiguration : IKubernetesObject, IKubernetesTypes
@@ -47,7 +50,7 @@ namespace k8s.Models
         private const string kubeGroup = "admissionregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1MutatingWebhookConfigurationList : IKubernetesObject, IKubernetesTypes
@@ -57,7 +60,7 @@ namespace k8s.Models
         private const string kubeGroup = "admissionregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1ValidatingWebhookConfiguration : IKubernetesObject, IKubernetesTypes
@@ -67,7 +70,7 @@ namespace k8s.Models
         private const string kubeGroup = "admissionregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1ValidatingWebhookConfigurationList : IKubernetesObject, IKubernetesTypes
@@ -77,7 +80,7 @@ namespace k8s.Models
         private const string kubeGroup = "admissionregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ControllerRevision : IKubernetesObject, IKubernetesTypes
@@ -87,7 +90,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ControllerRevisionList : IKubernetesObject, IKubernetesTypes
@@ -97,7 +100,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1DaemonSet : IKubernetesObject, IKubernetesTypes
@@ -107,7 +110,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1DaemonSetList : IKubernetesObject, IKubernetesTypes
@@ -117,7 +120,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Deployment : IKubernetesObject, IKubernetesTypes
@@ -127,7 +130,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1DeploymentList : IKubernetesObject, IKubernetesTypes
@@ -137,7 +140,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ReplicaSet : IKubernetesObject, IKubernetesTypes
@@ -147,7 +150,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ReplicaSetList : IKubernetesObject, IKubernetesTypes
@@ -157,7 +160,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1StatefulSet : IKubernetesObject, IKubernetesTypes
@@ -167,7 +170,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1StatefulSetList : IKubernetesObject, IKubernetesTypes
@@ -177,7 +180,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1ControllerRevision : IKubernetesObject, IKubernetesTypes
@@ -187,7 +190,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1ControllerRevisionList : IKubernetesObject, IKubernetesTypes
@@ -197,7 +200,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1StatefulSet : IKubernetesObject, IKubernetesTypes
@@ -207,7 +210,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1StatefulSetList : IKubernetesObject, IKubernetesTypes
@@ -217,7 +220,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2ControllerRevision : IKubernetesObject, IKubernetesTypes
@@ -227,7 +230,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2ControllerRevisionList : IKubernetesObject, IKubernetesTypes
@@ -237,7 +240,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2DaemonSet : IKubernetesObject, IKubernetesTypes
@@ -247,7 +250,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2DaemonSetList : IKubernetesObject, IKubernetesTypes
@@ -257,7 +260,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2Deployment : IKubernetesObject, IKubernetesTypes
@@ -267,7 +270,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2DeploymentList : IKubernetesObject, IKubernetesTypes
@@ -277,7 +280,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2ReplicaSet : IKubernetesObject, IKubernetesTypes
@@ -287,7 +290,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2ReplicaSetList : IKubernetesObject, IKubernetesTypes
@@ -297,7 +300,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2Scale : IKubernetesObject, IKubernetesTypes
@@ -307,7 +310,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2StatefulSet : IKubernetesObject, IKubernetesTypes
@@ -317,7 +320,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta2StatefulSetList : IKubernetesObject, IKubernetesTypes
@@ -327,7 +330,7 @@ namespace k8s.Models
         private const string kubeGroup = "apps";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1AuditSink : IKubernetesObject, IKubernetesTypes
@@ -337,7 +340,7 @@ namespace k8s.Models
         private const string kubeGroup = "auditregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1AuditSinkList : IKubernetesObject, IKubernetesTypes
@@ -347,7 +350,7 @@ namespace k8s.Models
         private const string kubeGroup = "auditregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1TokenRequest : IKubernetesObject, IKubernetesTypes
@@ -357,7 +360,7 @@ namespace k8s.Models
         private const string kubeGroup = "authentication.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1TokenReview : IKubernetesObject, IKubernetesTypes
@@ -367,7 +370,7 @@ namespace k8s.Models
         private const string kubeGroup = "authentication.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1TokenReview : IKubernetesObject, IKubernetesTypes
@@ -377,7 +380,7 @@ namespace k8s.Models
         private const string kubeGroup = "authentication.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1LocalSubjectAccessReview : IKubernetesObject, IKubernetesTypes
@@ -387,7 +390,7 @@ namespace k8s.Models
         private const string kubeGroup = "authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1SelfSubjectAccessReview : IKubernetesObject, IKubernetesTypes
@@ -397,7 +400,7 @@ namespace k8s.Models
         private const string kubeGroup = "authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1SelfSubjectRulesReview : IKubernetesObject, IKubernetesTypes
@@ -407,7 +410,7 @@ namespace k8s.Models
         private const string kubeGroup = "authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1SubjectAccessReview : IKubernetesObject, IKubernetesTypes
@@ -417,7 +420,7 @@ namespace k8s.Models
         private const string kubeGroup = "authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1LocalSubjectAccessReview : IKubernetesObject, IKubernetesTypes
@@ -427,7 +430,7 @@ namespace k8s.Models
         private const string kubeGroup = "authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1SelfSubjectAccessReview : IKubernetesObject, IKubernetesTypes
@@ -437,7 +440,7 @@ namespace k8s.Models
         private const string kubeGroup = "authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1SelfSubjectRulesReview : IKubernetesObject, IKubernetesTypes
@@ -447,7 +450,7 @@ namespace k8s.Models
         private const string kubeGroup = "authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1SubjectAccessReview : IKubernetesObject, IKubernetesTypes
@@ -457,7 +460,7 @@ namespace k8s.Models
         private const string kubeGroup = "authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1HorizontalPodAutoscaler : IKubernetesObject, IKubernetesTypes
@@ -467,7 +470,7 @@ namespace k8s.Models
         private const string kubeGroup = "autoscaling";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1HorizontalPodAutoscalerList : IKubernetesObject, IKubernetesTypes
@@ -477,7 +480,7 @@ namespace k8s.Models
         private const string kubeGroup = "autoscaling";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Scale : IKubernetesObject, IKubernetesTypes
@@ -487,7 +490,7 @@ namespace k8s.Models
         private const string kubeGroup = "autoscaling";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V2beta1HorizontalPodAutoscaler : IKubernetesObject, IKubernetesTypes
@@ -497,7 +500,7 @@ namespace k8s.Models
         private const string kubeGroup = "autoscaling";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V2beta1HorizontalPodAutoscalerList : IKubernetesObject, IKubernetesTypes
@@ -507,7 +510,7 @@ namespace k8s.Models
         private const string kubeGroup = "autoscaling";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V2beta2HorizontalPodAutoscaler : IKubernetesObject, IKubernetesTypes
@@ -517,7 +520,7 @@ namespace k8s.Models
         private const string kubeGroup = "autoscaling";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V2beta2HorizontalPodAutoscalerList : IKubernetesObject, IKubernetesTypes
@@ -527,7 +530,7 @@ namespace k8s.Models
         private const string kubeGroup = "autoscaling";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Job : IKubernetesObject, IKubernetesTypes
@@ -537,7 +540,7 @@ namespace k8s.Models
         private const string kubeGroup = "batch";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1JobList : IKubernetesObject, IKubernetesTypes
@@ -547,7 +550,7 @@ namespace k8s.Models
         private const string kubeGroup = "batch";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1CronJob : IKubernetesObject, IKubernetesTypes
@@ -557,7 +560,7 @@ namespace k8s.Models
         private const string kubeGroup = "batch";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1CronJobList : IKubernetesObject, IKubernetesTypes
@@ -567,7 +570,7 @@ namespace k8s.Models
         private const string kubeGroup = "batch";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V2alpha1CronJob : IKubernetesObject, IKubernetesTypes
@@ -577,7 +580,7 @@ namespace k8s.Models
         private const string kubeGroup = "batch";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V2alpha1CronJobList : IKubernetesObject, IKubernetesTypes
@@ -587,7 +590,7 @@ namespace k8s.Models
         private const string kubeGroup = "batch";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1CertificateSigningRequest : IKubernetesObject, IKubernetesTypes
@@ -597,7 +600,7 @@ namespace k8s.Models
         private const string kubeGroup = "certificates.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1CertificateSigningRequestList : IKubernetesObject, IKubernetesTypes
@@ -607,7 +610,7 @@ namespace k8s.Models
         private const string kubeGroup = "certificates.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Lease : IKubernetesObject, IKubernetesTypes
@@ -617,7 +620,7 @@ namespace k8s.Models
         private const string kubeGroup = "coordination.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1LeaseList : IKubernetesObject, IKubernetesTypes
@@ -627,7 +630,7 @@ namespace k8s.Models
         private const string kubeGroup = "coordination.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1Lease : IKubernetesObject, IKubernetesTypes
@@ -637,7 +640,7 @@ namespace k8s.Models
         private const string kubeGroup = "coordination.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1LeaseList : IKubernetesObject, IKubernetesTypes
@@ -647,7 +650,7 @@ namespace k8s.Models
         private const string kubeGroup = "coordination.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Binding : IKubernetesObject, IKubernetesTypes
@@ -657,7 +660,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ComponentStatus : IKubernetesObject, IKubernetesTypes
@@ -667,7 +670,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ComponentStatusList : IKubernetesObject, IKubernetesTypes
@@ -677,7 +680,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ConfigMap : IKubernetesObject, IKubernetesTypes
@@ -687,7 +690,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ConfigMapList : IKubernetesObject, IKubernetesTypes
@@ -697,7 +700,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Endpoints : IKubernetesObject, IKubernetesTypes
@@ -707,7 +710,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1EndpointsList : IKubernetesObject, IKubernetesTypes
@@ -717,7 +720,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Event : IKubernetesObject, IKubernetesTypes
@@ -727,7 +730,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1EventList : IKubernetesObject, IKubernetesTypes
@@ -737,7 +740,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1LimitRange : IKubernetesObject, IKubernetesTypes
@@ -747,7 +750,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1LimitRangeList : IKubernetesObject, IKubernetesTypes
@@ -757,7 +760,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Namespace : IKubernetesObject, IKubernetesTypes
@@ -767,7 +770,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1NamespaceList : IKubernetesObject, IKubernetesTypes
@@ -777,7 +780,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Node : IKubernetesObject, IKubernetesTypes
@@ -787,7 +790,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1NodeList : IKubernetesObject, IKubernetesTypes
@@ -797,7 +800,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1PersistentVolume : IKubernetesObject, IKubernetesTypes
@@ -807,7 +810,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1PersistentVolumeClaim : IKubernetesObject, IKubernetesTypes
@@ -817,7 +820,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1PersistentVolumeClaimList : IKubernetesObject, IKubernetesTypes
@@ -827,7 +830,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1PersistentVolumeList : IKubernetesObject, IKubernetesTypes
@@ -837,7 +840,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Pod : IKubernetesObject, IKubernetesTypes
@@ -847,7 +850,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1PodList : IKubernetesObject, IKubernetesTypes
@@ -857,7 +860,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1PodTemplate : IKubernetesObject, IKubernetesTypes
@@ -867,7 +870,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1PodTemplateList : IKubernetesObject, IKubernetesTypes
@@ -877,7 +880,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ReplicationController : IKubernetesObject, IKubernetesTypes
@@ -887,7 +890,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ReplicationControllerList : IKubernetesObject, IKubernetesTypes
@@ -897,7 +900,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ResourceQuota : IKubernetesObject, IKubernetesTypes
@@ -907,7 +910,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ResourceQuotaList : IKubernetesObject, IKubernetesTypes
@@ -917,7 +920,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Secret : IKubernetesObject, IKubernetesTypes
@@ -927,7 +930,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1SecretList : IKubernetesObject, IKubernetesTypes
@@ -937,7 +940,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Service : IKubernetesObject, IKubernetesTypes
@@ -947,7 +950,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ServiceAccount : IKubernetesObject, IKubernetesTypes
@@ -957,7 +960,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ServiceAccountList : IKubernetesObject, IKubernetesTypes
@@ -967,7 +970,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ServiceList : IKubernetesObject, IKubernetesTypes
@@ -977,7 +980,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1EndpointSlice : IKubernetesObject, IKubernetesTypes
@@ -987,7 +990,7 @@ namespace k8s.Models
         private const string kubeGroup = "discovery.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1EndpointSliceList : IKubernetesObject, IKubernetesTypes
@@ -997,7 +1000,7 @@ namespace k8s.Models
         private const string kubeGroup = "discovery.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1Event : IKubernetesObject, IKubernetesTypes
@@ -1007,7 +1010,7 @@ namespace k8s.Models
         private const string kubeGroup = "events.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1EventList : IKubernetesObject, IKubernetesTypes
@@ -1017,7 +1020,7 @@ namespace k8s.Models
         private const string kubeGroup = "events.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1DaemonSet : IKubernetesObject, IKubernetesTypes
@@ -1027,7 +1030,7 @@ namespace k8s.Models
         private const string kubeGroup = "extensions";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1DaemonSetList : IKubernetesObject, IKubernetesTypes
@@ -1037,7 +1040,7 @@ namespace k8s.Models
         private const string kubeGroup = "extensions";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1NetworkPolicy : IKubernetesObject, IKubernetesTypes
@@ -1047,7 +1050,7 @@ namespace k8s.Models
         private const string kubeGroup = "extensions";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1NetworkPolicyList : IKubernetesObject, IKubernetesTypes
@@ -1057,7 +1060,7 @@ namespace k8s.Models
         private const string kubeGroup = "extensions";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1ReplicaSet : IKubernetesObject, IKubernetesTypes
@@ -1067,7 +1070,7 @@ namespace k8s.Models
         private const string kubeGroup = "extensions";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1ReplicaSetList : IKubernetesObject, IKubernetesTypes
@@ -1077,7 +1080,7 @@ namespace k8s.Models
         private const string kubeGroup = "extensions";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1NetworkPolicy : IKubernetesObject, IKubernetesTypes
@@ -1087,7 +1090,7 @@ namespace k8s.Models
         private const string kubeGroup = "networking.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1NetworkPolicyList : IKubernetesObject, IKubernetesTypes
@@ -1097,7 +1100,7 @@ namespace k8s.Models
         private const string kubeGroup = "networking.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1RuntimeClass : IKubernetesObject, IKubernetesTypes
@@ -1107,7 +1110,7 @@ namespace k8s.Models
         private const string kubeGroup = "node.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1RuntimeClassList : IKubernetesObject, IKubernetesTypes
@@ -1117,7 +1120,7 @@ namespace k8s.Models
         private const string kubeGroup = "node.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1RuntimeClass : IKubernetesObject, IKubernetesTypes
@@ -1127,7 +1130,7 @@ namespace k8s.Models
         private const string kubeGroup = "node.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1RuntimeClassList : IKubernetesObject, IKubernetesTypes
@@ -1137,7 +1140,7 @@ namespace k8s.Models
         private const string kubeGroup = "node.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1Eviction : IKubernetesObject, IKubernetesTypes
@@ -1147,7 +1150,7 @@ namespace k8s.Models
         private const string kubeGroup = "policy";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1PodDisruptionBudget : IKubernetesObject, IKubernetesTypes
@@ -1157,7 +1160,7 @@ namespace k8s.Models
         private const string kubeGroup = "policy";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1PodDisruptionBudgetList : IKubernetesObject, IKubernetesTypes
@@ -1167,7 +1170,7 @@ namespace k8s.Models
         private const string kubeGroup = "policy";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ClusterRole : IKubernetesObject, IKubernetesTypes
@@ -1177,7 +1180,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ClusterRoleBinding : IKubernetesObject, IKubernetesTypes
@@ -1187,7 +1190,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ClusterRoleBindingList : IKubernetesObject, IKubernetesTypes
@@ -1197,7 +1200,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1ClusterRoleList : IKubernetesObject, IKubernetesTypes
@@ -1207,7 +1210,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Role : IKubernetesObject, IKubernetesTypes
@@ -1217,7 +1220,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1RoleBinding : IKubernetesObject, IKubernetesTypes
@@ -1227,7 +1230,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1RoleBindingList : IKubernetesObject, IKubernetesTypes
@@ -1237,7 +1240,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1RoleList : IKubernetesObject, IKubernetesTypes
@@ -1247,7 +1250,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1ClusterRole : IKubernetesObject, IKubernetesTypes
@@ -1257,7 +1260,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1ClusterRoleBinding : IKubernetesObject, IKubernetesTypes
@@ -1267,7 +1270,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1ClusterRoleBindingList : IKubernetesObject, IKubernetesTypes
@@ -1277,7 +1280,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1ClusterRoleList : IKubernetesObject, IKubernetesTypes
@@ -1287,7 +1290,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1Role : IKubernetesObject, IKubernetesTypes
@@ -1297,7 +1300,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1RoleBinding : IKubernetesObject, IKubernetesTypes
@@ -1307,7 +1310,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1RoleBindingList : IKubernetesObject, IKubernetesTypes
@@ -1317,7 +1320,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1RoleList : IKubernetesObject, IKubernetesTypes
@@ -1327,7 +1330,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1ClusterRole : IKubernetesObject, IKubernetesTypes
@@ -1337,7 +1340,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1ClusterRoleBinding : IKubernetesObject, IKubernetesTypes
@@ -1347,7 +1350,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1ClusterRoleBindingList : IKubernetesObject, IKubernetesTypes
@@ -1357,7 +1360,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1ClusterRoleList : IKubernetesObject, IKubernetesTypes
@@ -1367,7 +1370,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1Role : IKubernetesObject, IKubernetesTypes
@@ -1377,7 +1380,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1RoleBinding : IKubernetesObject, IKubernetesTypes
@@ -1387,7 +1390,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1RoleBindingList : IKubernetesObject, IKubernetesTypes
@@ -1397,7 +1400,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1RoleList : IKubernetesObject, IKubernetesTypes
@@ -1407,7 +1410,7 @@ namespace k8s.Models
         private const string kubeGroup = "rbac.authorization.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1PriorityClass : IKubernetesObject, IKubernetesTypes
@@ -1417,7 +1420,7 @@ namespace k8s.Models
         private const string kubeGroup = "scheduling.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1PriorityClassList : IKubernetesObject, IKubernetesTypes
@@ -1427,7 +1430,7 @@ namespace k8s.Models
         private const string kubeGroup = "scheduling.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1PriorityClass : IKubernetesObject, IKubernetesTypes
@@ -1437,7 +1440,7 @@ namespace k8s.Models
         private const string kubeGroup = "scheduling.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1PriorityClassList : IKubernetesObject, IKubernetesTypes
@@ -1447,7 +1450,7 @@ namespace k8s.Models
         private const string kubeGroup = "scheduling.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1PriorityClass : IKubernetesObject, IKubernetesTypes
@@ -1457,7 +1460,7 @@ namespace k8s.Models
         private const string kubeGroup = "scheduling.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1PriorityClassList : IKubernetesObject, IKubernetesTypes
@@ -1467,7 +1470,7 @@ namespace k8s.Models
         private const string kubeGroup = "scheduling.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1PodPreset : IKubernetesObject, IKubernetesTypes
@@ -1477,7 +1480,7 @@ namespace k8s.Models
         private const string kubeGroup = "settings.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1PodPresetList : IKubernetesObject, IKubernetesTypes
@@ -1487,7 +1490,7 @@ namespace k8s.Models
         private const string kubeGroup = "settings.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1StorageClass : IKubernetesObject, IKubernetesTypes
@@ -1497,7 +1500,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1StorageClassList : IKubernetesObject, IKubernetesTypes
@@ -1507,7 +1510,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1VolumeAttachment : IKubernetesObject, IKubernetesTypes
@@ -1517,7 +1520,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1VolumeAttachmentList : IKubernetesObject, IKubernetesTypes
@@ -1527,7 +1530,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1VolumeAttachment : IKubernetesObject, IKubernetesTypes
@@ -1537,7 +1540,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1alpha1VolumeAttachmentList : IKubernetesObject, IKubernetesTypes
@@ -1547,7 +1550,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1CSIDriver : IKubernetesObject, IKubernetesTypes
@@ -1557,7 +1560,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1CSIDriverList : IKubernetesObject, IKubernetesTypes
@@ -1567,7 +1570,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1CSINode : IKubernetesObject, IKubernetesTypes
@@ -1577,7 +1580,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1CSINodeList : IKubernetesObject, IKubernetesTypes
@@ -1587,7 +1590,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1StorageClass : IKubernetesObject, IKubernetesTypes
@@ -1597,7 +1600,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1StorageClassList : IKubernetesObject, IKubernetesTypes
@@ -1607,7 +1610,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1VolumeAttachment : IKubernetesObject, IKubernetesTypes
@@ -1617,7 +1620,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1VolumeAttachmentList : IKubernetesObject, IKubernetesTypes
@@ -1627,7 +1630,7 @@ namespace k8s.Models
         private const string kubeGroup = "storage.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1CustomResourceDefinition : IKubernetesObject, IKubernetesTypes
@@ -1637,7 +1640,7 @@ namespace k8s.Models
         private const string kubeGroup = "apiextensions.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1CustomResourceDefinitionList : IKubernetesObject, IKubernetesTypes
@@ -1647,7 +1650,7 @@ namespace k8s.Models
         private const string kubeGroup = "apiextensions.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1CustomResourceDefinition : IKubernetesObject, IKubernetesTypes
@@ -1657,7 +1660,7 @@ namespace k8s.Models
         private const string kubeGroup = "apiextensions.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1CustomResourceDefinitionList : IKubernetesObject, IKubernetesTypes
@@ -1667,7 +1670,7 @@ namespace k8s.Models
         private const string kubeGroup = "apiextensions.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1APIGroup : IKubernetesObject, IKubernetesTypes
@@ -1677,7 +1680,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1APIGroupList : IKubernetesObject, IKubernetesTypes
@@ -1687,7 +1690,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1APIResourceList : IKubernetesObject, IKubernetesTypes
@@ -1697,7 +1700,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1APIVersions : IKubernetesObject, IKubernetesTypes
@@ -1707,7 +1710,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1DeleteOptions : IKubernetesObject, IKubernetesTypes
@@ -1717,7 +1720,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1Status : IKubernetesObject, IKubernetesTypes
@@ -1727,7 +1730,7 @@ namespace k8s.Models
         private const string kubeGroup = "";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1APIService : IKubernetesObject, IKubernetesTypes
@@ -1737,7 +1740,7 @@ namespace k8s.Models
         private const string kubeGroup = "apiregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1APIServiceList : IKubernetesObject, IKubernetesTypes
@@ -1747,7 +1750,7 @@ namespace k8s.Models
         private const string kubeGroup = "apiregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1APIService : IKubernetesObject, IKubernetesTypes
@@ -1757,7 +1760,7 @@ namespace k8s.Models
         private const string kubeGroup = "apiregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
     public partial class V1beta1APIServiceList : IKubernetesObject, IKubernetesTypes
@@ -1767,7 +1770,7 @@ namespace k8s.Models
         private const string kubeGroup = "apiregistration.k8s.io";
         public string KubeApiVersion { get { return kubeApiVersion;} }
         public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}
+        public string KubeGroup {get {return kubeGroup;}}        
     }
 
 }
