@@ -7,11 +7,11 @@ namespace simple
     {
         private static void Main(string[] args)
         {
-            var config = KubernetesClientConfiguration.BuildConfigFromConfigFile(Environment.GetEnvironmentVariable("KUBECONFIG"));
+            var config = KubernetesClientConfiguration.BuildDefaultConfig();
             IKubernetes client = new Kubernetes(config);
             Console.WriteLine("Starting Request!");
 
-            var list = client.ListNamespacedPod("kube-system");
+            var list = client.ListNamespacedPod("default");
             foreach (var item in list.Items)
             {
                 Console.WriteLine(item.Metadata.Name);
