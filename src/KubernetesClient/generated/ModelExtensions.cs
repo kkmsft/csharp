@@ -1,1776 +1,1242 @@
-using System.Collections.Generic;
-using System.Reflection;
-
 namespace k8s.Models
 {
-    public partial class V1MutatingWebhookConfiguration : IKubernetesObject, IKubernetesTypes
+    public partial class V1MutatingWebhookConfiguration : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "MutatingWebhookConfiguration";
-        private const string kubeGroup = "admissionregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "MutatingWebhookConfiguration";
+        public const string KubeGroup = "admissionregistration.k8s.io";
     }
 
-    public partial class V1MutatingWebhookConfigurationList : IKubernetesObject, IKubernetesTypes
+    public partial class V1MutatingWebhookConfigurationList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "MutatingWebhookConfigurationList";
-        private const string kubeGroup = "admissionregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "MutatingWebhookConfigurationList";
+        public const string KubeGroup = "admissionregistration.k8s.io";
     }
 
-    public partial class V1ValidatingWebhookConfiguration : IKubernetesObject, IKubernetesTypes
+    public partial class V1ValidatingWebhookConfiguration : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ValidatingWebhookConfiguration";
-        private const string kubeGroup = "admissionregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ValidatingWebhookConfiguration";
+        public const string KubeGroup = "admissionregistration.k8s.io";
     }
 
-    public partial class V1ValidatingWebhookConfigurationList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ValidatingWebhookConfigurationList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ValidatingWebhookConfigurationList";
-        private const string kubeGroup = "admissionregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ValidatingWebhookConfigurationList";
+        public const string KubeGroup = "admissionregistration.k8s.io";
     }
 
-    public partial class V1beta1MutatingWebhookConfiguration : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1MutatingWebhookConfiguration : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "MutatingWebhookConfiguration";
-        private const string kubeGroup = "admissionregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "MutatingWebhookConfiguration";
+        public const string KubeGroup = "admissionregistration.k8s.io";
     }
 
-    public partial class V1beta1MutatingWebhookConfigurationList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1MutatingWebhookConfigurationList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "MutatingWebhookConfigurationList";
-        private const string kubeGroup = "admissionregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "MutatingWebhookConfigurationList";
+        public const string KubeGroup = "admissionregistration.k8s.io";
     }
 
-    public partial class V1beta1ValidatingWebhookConfiguration : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1ValidatingWebhookConfiguration : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "ValidatingWebhookConfiguration";
-        private const string kubeGroup = "admissionregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "ValidatingWebhookConfiguration";
+        public const string KubeGroup = "admissionregistration.k8s.io";
     }
 
-    public partial class V1beta1ValidatingWebhookConfigurationList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1ValidatingWebhookConfigurationList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "ValidatingWebhookConfigurationList";
-        private const string kubeGroup = "admissionregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "ValidatingWebhookConfigurationList";
+        public const string KubeGroup = "admissionregistration.k8s.io";
     }
 
-    public partial class V1ControllerRevision : IKubernetesObject, IKubernetesTypes
+    public partial class V1ControllerRevision : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ControllerRevision";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ControllerRevision";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1ControllerRevisionList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ControllerRevisionList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ControllerRevisionList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ControllerRevisionList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1DaemonSet : IKubernetesObject, IKubernetesTypes
+    public partial class V1DaemonSet : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "DaemonSet";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "DaemonSet";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1DaemonSetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1DaemonSetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "DaemonSetList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "DaemonSetList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1Deployment : IKubernetesObject, IKubernetesTypes
+    public partial class V1Deployment : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Deployment";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Deployment";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1DeploymentList : IKubernetesObject, IKubernetesTypes
+    public partial class V1DeploymentList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "DeploymentList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "DeploymentList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1ReplicaSet : IKubernetesObject, IKubernetesTypes
+    public partial class V1ReplicaSet : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ReplicaSet";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ReplicaSet";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1ReplicaSetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ReplicaSetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ReplicaSetList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ReplicaSetList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1StatefulSet : IKubernetesObject, IKubernetesTypes
+    public partial class V1StatefulSet : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "StatefulSet";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "StatefulSet";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1StatefulSetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1StatefulSetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "StatefulSetList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "StatefulSetList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta1ControllerRevision : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1ControllerRevision : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "ControllerRevision";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "ControllerRevision";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta1ControllerRevisionList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1ControllerRevisionList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "ControllerRevisionList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "ControllerRevisionList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta1StatefulSet : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1StatefulSet : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "StatefulSet";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "StatefulSet";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta1StatefulSetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1StatefulSetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "StatefulSetList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "StatefulSetList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2ControllerRevision : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2ControllerRevision : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "ControllerRevision";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "ControllerRevision";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2ControllerRevisionList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2ControllerRevisionList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "ControllerRevisionList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "ControllerRevisionList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2DaemonSet : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2DaemonSet : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "DaemonSet";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "DaemonSet";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2DaemonSetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2DaemonSetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "DaemonSetList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "DaemonSetList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2Deployment : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2Deployment : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "Deployment";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "Deployment";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2DeploymentList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2DeploymentList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "DeploymentList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "DeploymentList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2ReplicaSet : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2ReplicaSet : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "ReplicaSet";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "ReplicaSet";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2ReplicaSetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2ReplicaSetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "ReplicaSetList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "ReplicaSetList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2Scale : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2Scale : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "Scale";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "Scale";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2StatefulSet : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2StatefulSet : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "StatefulSet";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "StatefulSet";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1beta2StatefulSetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta2StatefulSetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta2";
-        private const string kubeKind = "StatefulSetList";
-        private const string kubeGroup = "apps";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta2";
+        public const string KubeKind = "StatefulSetList";
+        public const string KubeGroup = "apps";
     }
 
-    public partial class V1alpha1AuditSink : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1AuditSink : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "AuditSink";
-        private const string kubeGroup = "auditregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "AuditSink";
+        public const string KubeGroup = "auditregistration.k8s.io";
     }
 
-    public partial class V1alpha1AuditSinkList : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1AuditSinkList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "AuditSinkList";
-        private const string kubeGroup = "auditregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "AuditSinkList";
+        public const string KubeGroup = "auditregistration.k8s.io";
     }
 
-    public partial class V1TokenRequest : IKubernetesObject, IKubernetesTypes
+    public partial class V1TokenRequest : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "TokenRequest";
-        private const string kubeGroup = "authentication.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "TokenRequest";
+        public const string KubeGroup = "authentication.k8s.io";
     }
 
-    public partial class V1TokenReview : IKubernetesObject, IKubernetesTypes
+    public partial class V1TokenReview : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "TokenReview";
-        private const string kubeGroup = "authentication.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "TokenReview";
+        public const string KubeGroup = "authentication.k8s.io";
     }
 
-    public partial class V1beta1TokenReview : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1TokenReview : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "TokenReview";
-        private const string kubeGroup = "authentication.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "TokenReview";
+        public const string KubeGroup = "authentication.k8s.io";
     }
 
-    public partial class V1LocalSubjectAccessReview : IKubernetesObject, IKubernetesTypes
+    public partial class V1LocalSubjectAccessReview : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "LocalSubjectAccessReview";
-        private const string kubeGroup = "authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "LocalSubjectAccessReview";
+        public const string KubeGroup = "authorization.k8s.io";
     }
 
-    public partial class V1SelfSubjectAccessReview : IKubernetesObject, IKubernetesTypes
+    public partial class V1SelfSubjectAccessReview : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "SelfSubjectAccessReview";
-        private const string kubeGroup = "authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "SelfSubjectAccessReview";
+        public const string KubeGroup = "authorization.k8s.io";
     }
 
-    public partial class V1SelfSubjectRulesReview : IKubernetesObject, IKubernetesTypes
+    public partial class V1SelfSubjectRulesReview : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "SelfSubjectRulesReview";
-        private const string kubeGroup = "authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "SelfSubjectRulesReview";
+        public const string KubeGroup = "authorization.k8s.io";
     }
 
-    public partial class V1SubjectAccessReview : IKubernetesObject, IKubernetesTypes
+    public partial class V1SubjectAccessReview : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "SubjectAccessReview";
-        private const string kubeGroup = "authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "SubjectAccessReview";
+        public const string KubeGroup = "authorization.k8s.io";
     }
 
-    public partial class V1beta1LocalSubjectAccessReview : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1LocalSubjectAccessReview : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "LocalSubjectAccessReview";
-        private const string kubeGroup = "authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "LocalSubjectAccessReview";
+        public const string KubeGroup = "authorization.k8s.io";
     }
 
-    public partial class V1beta1SelfSubjectAccessReview : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1SelfSubjectAccessReview : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "SelfSubjectAccessReview";
-        private const string kubeGroup = "authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "SelfSubjectAccessReview";
+        public const string KubeGroup = "authorization.k8s.io";
     }
 
-    public partial class V1beta1SelfSubjectRulesReview : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1SelfSubjectRulesReview : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "SelfSubjectRulesReview";
-        private const string kubeGroup = "authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "SelfSubjectRulesReview";
+        public const string KubeGroup = "authorization.k8s.io";
     }
 
-    public partial class V1beta1SubjectAccessReview : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1SubjectAccessReview : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "SubjectAccessReview";
-        private const string kubeGroup = "authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "SubjectAccessReview";
+        public const string KubeGroup = "authorization.k8s.io";
     }
 
-    public partial class V1HorizontalPodAutoscaler : IKubernetesObject, IKubernetesTypes
+    public partial class V1HorizontalPodAutoscaler : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "HorizontalPodAutoscaler";
-        private const string kubeGroup = "autoscaling";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "HorizontalPodAutoscaler";
+        public const string KubeGroup = "autoscaling";
     }
 
-    public partial class V1HorizontalPodAutoscalerList : IKubernetesObject, IKubernetesTypes
+    public partial class V1HorizontalPodAutoscalerList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "HorizontalPodAutoscalerList";
-        private const string kubeGroup = "autoscaling";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "HorizontalPodAutoscalerList";
+        public const string KubeGroup = "autoscaling";
     }
 
-    public partial class V1Scale : IKubernetesObject, IKubernetesTypes
+    public partial class V1Scale : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Scale";
-        private const string kubeGroup = "autoscaling";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Scale";
+        public const string KubeGroup = "autoscaling";
     }
 
-    public partial class V2beta1HorizontalPodAutoscaler : IKubernetesObject, IKubernetesTypes
+    public partial class V2beta1HorizontalPodAutoscaler : IKubernetesObject
     {
-        private const string kubeApiVersion = "v2beta1";
-        private const string kubeKind = "HorizontalPodAutoscaler";
-        private const string kubeGroup = "autoscaling";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v2beta1";
+        public const string KubeKind = "HorizontalPodAutoscaler";
+        public const string KubeGroup = "autoscaling";
     }
 
-    public partial class V2beta1HorizontalPodAutoscalerList : IKubernetesObject, IKubernetesTypes
+    public partial class V2beta1HorizontalPodAutoscalerList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v2beta1";
-        private const string kubeKind = "HorizontalPodAutoscalerList";
-        private const string kubeGroup = "autoscaling";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v2beta1";
+        public const string KubeKind = "HorizontalPodAutoscalerList";
+        public const string KubeGroup = "autoscaling";
     }
 
-    public partial class V2beta2HorizontalPodAutoscaler : IKubernetesObject, IKubernetesTypes
+    public partial class V2beta2HorizontalPodAutoscaler : IKubernetesObject
     {
-        private const string kubeApiVersion = "v2beta2";
-        private const string kubeKind = "HorizontalPodAutoscaler";
-        private const string kubeGroup = "autoscaling";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v2beta2";
+        public const string KubeKind = "HorizontalPodAutoscaler";
+        public const string KubeGroup = "autoscaling";
     }
 
-    public partial class V2beta2HorizontalPodAutoscalerList : IKubernetesObject, IKubernetesTypes
+    public partial class V2beta2HorizontalPodAutoscalerList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v2beta2";
-        private const string kubeKind = "HorizontalPodAutoscalerList";
-        private const string kubeGroup = "autoscaling";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v2beta2";
+        public const string KubeKind = "HorizontalPodAutoscalerList";
+        public const string KubeGroup = "autoscaling";
     }
 
-    public partial class V1Job : IKubernetesObject, IKubernetesTypes
+    public partial class V1Job : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Job";
-        private const string kubeGroup = "batch";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Job";
+        public const string KubeGroup = "batch";
     }
 
-    public partial class V1JobList : IKubernetesObject, IKubernetesTypes
+    public partial class V1JobList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "JobList";
-        private const string kubeGroup = "batch";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "JobList";
+        public const string KubeGroup = "batch";
     }
 
-    public partial class V1beta1CronJob : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1CronJob : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "CronJob";
-        private const string kubeGroup = "batch";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "CronJob";
+        public const string KubeGroup = "batch";
     }
 
-    public partial class V1beta1CronJobList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1CronJobList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "CronJobList";
-        private const string kubeGroup = "batch";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "CronJobList";
+        public const string KubeGroup = "batch";
     }
 
-    public partial class V2alpha1CronJob : IKubernetesObject, IKubernetesTypes
+    public partial class V2alpha1CronJob : IKubernetesObject
     {
-        private const string kubeApiVersion = "v2alpha1";
-        private const string kubeKind = "CronJob";
-        private const string kubeGroup = "batch";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v2alpha1";
+        public const string KubeKind = "CronJob";
+        public const string KubeGroup = "batch";
     }
 
-    public partial class V2alpha1CronJobList : IKubernetesObject, IKubernetesTypes
+    public partial class V2alpha1CronJobList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v2alpha1";
-        private const string kubeKind = "CronJobList";
-        private const string kubeGroup = "batch";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v2alpha1";
+        public const string KubeKind = "CronJobList";
+        public const string KubeGroup = "batch";
     }
 
-    public partial class V1beta1CertificateSigningRequest : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1CertificateSigningRequest : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "CertificateSigningRequest";
-        private const string kubeGroup = "certificates.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "CertificateSigningRequest";
+        public const string KubeGroup = "certificates.k8s.io";
     }
 
-    public partial class V1beta1CertificateSigningRequestList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1CertificateSigningRequestList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "CertificateSigningRequestList";
-        private const string kubeGroup = "certificates.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "CertificateSigningRequestList";
+        public const string KubeGroup = "certificates.k8s.io";
     }
 
-    public partial class V1Lease : IKubernetesObject, IKubernetesTypes
+    public partial class V1Lease : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Lease";
-        private const string kubeGroup = "coordination.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Lease";
+        public const string KubeGroup = "coordination.k8s.io";
     }
 
-    public partial class V1LeaseList : IKubernetesObject, IKubernetesTypes
+    public partial class V1LeaseList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "LeaseList";
-        private const string kubeGroup = "coordination.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "LeaseList";
+        public const string KubeGroup = "coordination.k8s.io";
     }
 
-    public partial class V1beta1Lease : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1Lease : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "Lease";
-        private const string kubeGroup = "coordination.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "Lease";
+        public const string KubeGroup = "coordination.k8s.io";
     }
 
-    public partial class V1beta1LeaseList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1LeaseList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "LeaseList";
-        private const string kubeGroup = "coordination.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "LeaseList";
+        public const string KubeGroup = "coordination.k8s.io";
     }
 
-    public partial class V1Binding : IKubernetesObject, IKubernetesTypes
+    public partial class V1Binding : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Binding";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Binding";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ComponentStatus : IKubernetesObject, IKubernetesTypes
+    public partial class V1ComponentStatus : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ComponentStatus";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ComponentStatus";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ComponentStatusList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ComponentStatusList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ComponentStatusList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ComponentStatusList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ConfigMap : IKubernetesObject, IKubernetesTypes
+    public partial class V1ConfigMap : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ConfigMap";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ConfigMap";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ConfigMapList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ConfigMapList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ConfigMapList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ConfigMapList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1Endpoints : IKubernetesObject, IKubernetesTypes
+    public partial class V1Endpoints : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Endpoints";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Endpoints";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1EndpointsList : IKubernetesObject, IKubernetesTypes
+    public partial class V1EndpointsList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "EndpointsList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "EndpointsList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1Event : IKubernetesObject, IKubernetesTypes
+    public partial class V1Event : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Event";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Event";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1EventList : IKubernetesObject, IKubernetesTypes
+    public partial class V1EventList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "EventList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "EventList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1LimitRange : IKubernetesObject, IKubernetesTypes
+    public partial class V1LimitRange : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "LimitRange";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "LimitRange";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1LimitRangeList : IKubernetesObject, IKubernetesTypes
+    public partial class V1LimitRangeList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "LimitRangeList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "LimitRangeList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1Namespace : IKubernetesObject, IKubernetesTypes
+    public partial class V1Namespace : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Namespace";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Namespace";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1NamespaceList : IKubernetesObject, IKubernetesTypes
+    public partial class V1NamespaceList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "NamespaceList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "NamespaceList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1Node : IKubernetesObject, IKubernetesTypes
+    public partial class V1Node : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Node";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Node";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1NodeList : IKubernetesObject, IKubernetesTypes
+    public partial class V1NodeList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "NodeList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "NodeList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1PersistentVolume : IKubernetesObject, IKubernetesTypes
+    public partial class V1PersistentVolume : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "PersistentVolume";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "PersistentVolume";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1PersistentVolumeClaim : IKubernetesObject, IKubernetesTypes
+    public partial class V1PersistentVolumeClaim : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "PersistentVolumeClaim";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "PersistentVolumeClaim";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1PersistentVolumeClaimList : IKubernetesObject, IKubernetesTypes
+    public partial class V1PersistentVolumeClaimList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "PersistentVolumeClaimList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "PersistentVolumeClaimList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1PersistentVolumeList : IKubernetesObject, IKubernetesTypes
+    public partial class V1PersistentVolumeList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "PersistentVolumeList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "PersistentVolumeList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1Pod : IKubernetesObject, IKubernetesTypes
+    public partial class V1Pod : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Pod";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Pod";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1PodList : IKubernetesObject, IKubernetesTypes
+    public partial class V1PodList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "PodList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "PodList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1PodTemplate : IKubernetesObject, IKubernetesTypes
+    public partial class V1PodTemplate : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "PodTemplate";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "PodTemplate";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1PodTemplateList : IKubernetesObject, IKubernetesTypes
+    public partial class V1PodTemplateList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "PodTemplateList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "PodTemplateList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ReplicationController : IKubernetesObject, IKubernetesTypes
+    public partial class V1ReplicationController : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ReplicationController";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ReplicationController";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ReplicationControllerList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ReplicationControllerList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ReplicationControllerList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ReplicationControllerList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ResourceQuota : IKubernetesObject, IKubernetesTypes
+    public partial class V1ResourceQuota : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ResourceQuota";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ResourceQuota";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ResourceQuotaList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ResourceQuotaList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ResourceQuotaList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ResourceQuotaList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1Secret : IKubernetesObject, IKubernetesTypes
+    public partial class V1Secret : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Secret";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Secret";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1SecretList : IKubernetesObject, IKubernetesTypes
+    public partial class V1SecretList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "SecretList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "SecretList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1Service : IKubernetesObject, IKubernetesTypes
+    public partial class V1Service : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Service";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Service";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ServiceAccount : IKubernetesObject, IKubernetesTypes
+    public partial class V1ServiceAccount : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ServiceAccount";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ServiceAccount";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ServiceAccountList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ServiceAccountList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ServiceAccountList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ServiceAccountList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1ServiceList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ServiceList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ServiceList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ServiceList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1alpha1EndpointSlice : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1EndpointSlice : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "EndpointSlice";
-        private const string kubeGroup = "discovery.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "EndpointSlice";
+        public const string KubeGroup = "discovery.k8s.io";
     }
 
-    public partial class V1alpha1EndpointSliceList : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1EndpointSliceList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "EndpointSliceList";
-        private const string kubeGroup = "discovery.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "EndpointSliceList";
+        public const string KubeGroup = "discovery.k8s.io";
     }
 
-    public partial class V1beta1Event : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1Event : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "Event";
-        private const string kubeGroup = "events.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "Event";
+        public const string KubeGroup = "events.k8s.io";
     }
 
-    public partial class V1beta1EventList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1EventList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "EventList";
-        private const string kubeGroup = "events.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "EventList";
+        public const string KubeGroup = "events.k8s.io";
     }
 
-    public partial class V1beta1DaemonSet : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1DaemonSet : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "DaemonSet";
-        private const string kubeGroup = "extensions";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "DaemonSet";
+        public const string KubeGroup = "extensions";
     }
 
-    public partial class V1beta1DaemonSetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1DaemonSetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "DaemonSetList";
-        private const string kubeGroup = "extensions";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "DaemonSetList";
+        public const string KubeGroup = "extensions";
     }
 
-    public partial class V1beta1NetworkPolicy : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1NetworkPolicy : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "NetworkPolicy";
-        private const string kubeGroup = "extensions";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "NetworkPolicy";
+        public const string KubeGroup = "extensions";
     }
 
-    public partial class V1beta1NetworkPolicyList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1NetworkPolicyList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "NetworkPolicyList";
-        private const string kubeGroup = "extensions";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "NetworkPolicyList";
+        public const string KubeGroup = "extensions";
     }
 
-    public partial class V1beta1ReplicaSet : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1ReplicaSet : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "ReplicaSet";
-        private const string kubeGroup = "extensions";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "ReplicaSet";
+        public const string KubeGroup = "extensions";
     }
 
-    public partial class V1beta1ReplicaSetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1ReplicaSetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "ReplicaSetList";
-        private const string kubeGroup = "extensions";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "ReplicaSetList";
+        public const string KubeGroup = "extensions";
     }
 
-    public partial class V1NetworkPolicy : IKubernetesObject, IKubernetesTypes
+    public partial class V1NetworkPolicy : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "NetworkPolicy";
-        private const string kubeGroup = "networking.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "NetworkPolicy";
+        public const string KubeGroup = "networking.k8s.io";
     }
 
-    public partial class V1NetworkPolicyList : IKubernetesObject, IKubernetesTypes
+    public partial class V1NetworkPolicyList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "NetworkPolicyList";
-        private const string kubeGroup = "networking.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "NetworkPolicyList";
+        public const string KubeGroup = "networking.k8s.io";
     }
 
-    public partial class V1alpha1RuntimeClass : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1RuntimeClass : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "RuntimeClass";
-        private const string kubeGroup = "node.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "RuntimeClass";
+        public const string KubeGroup = "node.k8s.io";
     }
 
-    public partial class V1alpha1RuntimeClassList : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1RuntimeClassList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "RuntimeClassList";
-        private const string kubeGroup = "node.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "RuntimeClassList";
+        public const string KubeGroup = "node.k8s.io";
     }
 
-    public partial class V1beta1RuntimeClass : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1RuntimeClass : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "RuntimeClass";
-        private const string kubeGroup = "node.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "RuntimeClass";
+        public const string KubeGroup = "node.k8s.io";
     }
 
-    public partial class V1beta1RuntimeClassList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1RuntimeClassList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "RuntimeClassList";
-        private const string kubeGroup = "node.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "RuntimeClassList";
+        public const string KubeGroup = "node.k8s.io";
     }
 
-    public partial class V1beta1Eviction : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1Eviction : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "Eviction";
-        private const string kubeGroup = "policy";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "Eviction";
+        public const string KubeGroup = "policy";
     }
 
-    public partial class V1beta1PodDisruptionBudget : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1PodDisruptionBudget : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "PodDisruptionBudget";
-        private const string kubeGroup = "policy";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "PodDisruptionBudget";
+        public const string KubeGroup = "policy";
     }
 
-    public partial class V1beta1PodDisruptionBudgetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1PodDisruptionBudgetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "PodDisruptionBudgetList";
-        private const string kubeGroup = "policy";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "PodDisruptionBudgetList";
+        public const string KubeGroup = "policy";
     }
 
-    public partial class V1ClusterRole : IKubernetesObject, IKubernetesTypes
+    public partial class V1ClusterRole : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ClusterRole";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ClusterRole";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1ClusterRoleBinding : IKubernetesObject, IKubernetesTypes
+    public partial class V1ClusterRoleBinding : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ClusterRoleBinding";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ClusterRoleBinding";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1ClusterRoleBindingList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ClusterRoleBindingList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ClusterRoleBindingList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ClusterRoleBindingList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1ClusterRoleList : IKubernetesObject, IKubernetesTypes
+    public partial class V1ClusterRoleList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "ClusterRoleList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "ClusterRoleList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1Role : IKubernetesObject, IKubernetesTypes
+    public partial class V1Role : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Role";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Role";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1RoleBinding : IKubernetesObject, IKubernetesTypes
+    public partial class V1RoleBinding : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "RoleBinding";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "RoleBinding";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1RoleBindingList : IKubernetesObject, IKubernetesTypes
+    public partial class V1RoleBindingList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "RoleBindingList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "RoleBindingList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1RoleList : IKubernetesObject, IKubernetesTypes
+    public partial class V1RoleList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "RoleList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "RoleList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1alpha1ClusterRole : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1ClusterRole : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "ClusterRole";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "ClusterRole";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1alpha1ClusterRoleBinding : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1ClusterRoleBinding : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "ClusterRoleBinding";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "ClusterRoleBinding";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1alpha1ClusterRoleBindingList : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1ClusterRoleBindingList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "ClusterRoleBindingList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "ClusterRoleBindingList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1alpha1ClusterRoleList : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1ClusterRoleList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "ClusterRoleList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "ClusterRoleList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1alpha1Role : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1Role : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "Role";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "Role";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1alpha1RoleBinding : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1RoleBinding : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "RoleBinding";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "RoleBinding";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1alpha1RoleBindingList : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1RoleBindingList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "RoleBindingList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "RoleBindingList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1alpha1RoleList : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1RoleList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "RoleList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "RoleList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1beta1ClusterRole : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1ClusterRole : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "ClusterRole";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "ClusterRole";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1beta1ClusterRoleBinding : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1ClusterRoleBinding : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "ClusterRoleBinding";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "ClusterRoleBinding";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1beta1ClusterRoleBindingList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1ClusterRoleBindingList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "ClusterRoleBindingList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "ClusterRoleBindingList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1beta1ClusterRoleList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1ClusterRoleList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "ClusterRoleList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "ClusterRoleList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1beta1Role : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1Role : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "Role";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "Role";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1beta1RoleBinding : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1RoleBinding : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "RoleBinding";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "RoleBinding";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1beta1RoleBindingList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1RoleBindingList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "RoleBindingList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "RoleBindingList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1beta1RoleList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1RoleList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "RoleList";
-        private const string kubeGroup = "rbac.authorization.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "RoleList";
+        public const string KubeGroup = "rbac.authorization.k8s.io";
     }
 
-    public partial class V1PriorityClass : IKubernetesObject, IKubernetesTypes
+    public partial class V1PriorityClass : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "PriorityClass";
-        private const string kubeGroup = "scheduling.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "PriorityClass";
+        public const string KubeGroup = "scheduling.k8s.io";
     }
 
-    public partial class V1PriorityClassList : IKubernetesObject, IKubernetesTypes
+    public partial class V1PriorityClassList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "PriorityClassList";
-        private const string kubeGroup = "scheduling.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "PriorityClassList";
+        public const string KubeGroup = "scheduling.k8s.io";
     }
 
-    public partial class V1alpha1PriorityClass : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1PriorityClass : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "PriorityClass";
-        private const string kubeGroup = "scheduling.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "PriorityClass";
+        public const string KubeGroup = "scheduling.k8s.io";
     }
 
-    public partial class V1alpha1PriorityClassList : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1PriorityClassList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "PriorityClassList";
-        private const string kubeGroup = "scheduling.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "PriorityClassList";
+        public const string KubeGroup = "scheduling.k8s.io";
     }
 
-    public partial class V1beta1PriorityClass : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1PriorityClass : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "PriorityClass";
-        private const string kubeGroup = "scheduling.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "PriorityClass";
+        public const string KubeGroup = "scheduling.k8s.io";
     }
 
-    public partial class V1beta1PriorityClassList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1PriorityClassList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "PriorityClassList";
-        private const string kubeGroup = "scheduling.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "PriorityClassList";
+        public const string KubeGroup = "scheduling.k8s.io";
     }
 
-    public partial class V1alpha1PodPreset : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1PodPreset : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "PodPreset";
-        private const string kubeGroup = "settings.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "PodPreset";
+        public const string KubeGroup = "settings.k8s.io";
     }
 
-    public partial class V1alpha1PodPresetList : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1PodPresetList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "PodPresetList";
-        private const string kubeGroup = "settings.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "PodPresetList";
+        public const string KubeGroup = "settings.k8s.io";
     }
 
-    public partial class V1StorageClass : IKubernetesObject, IKubernetesTypes
+    public partial class V1StorageClass : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "StorageClass";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "StorageClass";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1StorageClassList : IKubernetesObject, IKubernetesTypes
+    public partial class V1StorageClassList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "StorageClassList";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "StorageClassList";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1VolumeAttachment : IKubernetesObject, IKubernetesTypes
+    public partial class V1VolumeAttachment : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "VolumeAttachment";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "VolumeAttachment";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1VolumeAttachmentList : IKubernetesObject, IKubernetesTypes
+    public partial class V1VolumeAttachmentList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "VolumeAttachmentList";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "VolumeAttachmentList";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1alpha1VolumeAttachment : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1VolumeAttachment : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "VolumeAttachment";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "VolumeAttachment";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1alpha1VolumeAttachmentList : IKubernetesObject, IKubernetesTypes
+    public partial class V1alpha1VolumeAttachmentList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1alpha1";
-        private const string kubeKind = "VolumeAttachmentList";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1alpha1";
+        public const string KubeKind = "VolumeAttachmentList";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1beta1CSIDriver : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1CSIDriver : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "CSIDriver";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "CSIDriver";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1beta1CSIDriverList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1CSIDriverList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "CSIDriverList";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "CSIDriverList";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1beta1CSINode : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1CSINode : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "CSINode";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "CSINode";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1beta1CSINodeList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1CSINodeList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "CSINodeList";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "CSINodeList";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1beta1StorageClass : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1StorageClass : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "StorageClass";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "StorageClass";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1beta1StorageClassList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1StorageClassList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "StorageClassList";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "StorageClassList";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1beta1VolumeAttachment : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1VolumeAttachment : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "VolumeAttachment";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "VolumeAttachment";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1beta1VolumeAttachmentList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1VolumeAttachmentList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "VolumeAttachmentList";
-        private const string kubeGroup = "storage.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "VolumeAttachmentList";
+        public const string KubeGroup = "storage.k8s.io";
     }
 
-    public partial class V1CustomResourceDefinition : IKubernetesObject, IKubernetesTypes
+    public partial class V1CustomResourceDefinition : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "CustomResourceDefinition";
-        private const string kubeGroup = "apiextensions.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "CustomResourceDefinition";
+        public const string KubeGroup = "apiextensions.k8s.io";
     }
 
-    public partial class V1CustomResourceDefinitionList : IKubernetesObject, IKubernetesTypes
+    public partial class V1CustomResourceDefinitionList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "CustomResourceDefinitionList";
-        private const string kubeGroup = "apiextensions.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "CustomResourceDefinitionList";
+        public const string KubeGroup = "apiextensions.k8s.io";
     }
 
-    public partial class V1beta1CustomResourceDefinition : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1CustomResourceDefinition : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "CustomResourceDefinition";
-        private const string kubeGroup = "apiextensions.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "CustomResourceDefinition";
+        public const string KubeGroup = "apiextensions.k8s.io";
     }
 
-    public partial class V1beta1CustomResourceDefinitionList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1CustomResourceDefinitionList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "CustomResourceDefinitionList";
-        private const string kubeGroup = "apiextensions.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "CustomResourceDefinitionList";
+        public const string KubeGroup = "apiextensions.k8s.io";
     }
 
-    public partial class V1APIGroup : IKubernetesObject, IKubernetesTypes
+    public partial class V1APIGroup : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "APIGroup";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "APIGroup";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1APIGroupList : IKubernetesObject, IKubernetesTypes
+    public partial class V1APIGroupList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "APIGroupList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "APIGroupList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1APIResourceList : IKubernetesObject, IKubernetesTypes
+    public partial class V1APIResourceList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "APIResourceList";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "APIResourceList";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1APIVersions : IKubernetesObject, IKubernetesTypes
+    public partial class V1APIVersions : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "APIVersions";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "APIVersions";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1DeleteOptions : IKubernetesObject, IKubernetesTypes
+    public partial class V1DeleteOptions : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "DeleteOptions";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "DeleteOptions";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1Status : IKubernetesObject, IKubernetesTypes
+    public partial class V1Status : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "Status";
-        private const string kubeGroup = "";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "Status";
+        public const string KubeGroup = "";
     }
 
-    public partial class V1APIService : IKubernetesObject, IKubernetesTypes
+    public partial class V1APIService : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "APIService";
-        private const string kubeGroup = "apiregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "APIService";
+        public const string KubeGroup = "apiregistration.k8s.io";
     }
 
-    public partial class V1APIServiceList : IKubernetesObject, IKubernetesTypes
+    public partial class V1APIServiceList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1";
-        private const string kubeKind = "APIServiceList";
-        private const string kubeGroup = "apiregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1";
+        public const string KubeKind = "APIServiceList";
+        public const string KubeGroup = "apiregistration.k8s.io";
     }
 
-    public partial class V1beta1APIService : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1APIService : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "APIService";
-        private const string kubeGroup = "apiregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "APIService";
+        public const string KubeGroup = "apiregistration.k8s.io";
     }
 
-    public partial class V1beta1APIServiceList : IKubernetesObject, IKubernetesTypes
+    public partial class V1beta1APIServiceList : IKubernetesObject
     {
-        private const string kubeApiVersion = "v1beta1";
-        private const string kubeKind = "APIServiceList";
-        private const string kubeGroup = "apiregistration.k8s.io";
-        public string KubeApiVersion { get { return kubeApiVersion;} }
-        public string KubeKind {get {return kubeKind;}}
-        public string KubeGroup {get {return kubeGroup;}}        
+        public const string KubeApiVersion = "v1beta1";
+        public const string KubeKind = "APIServiceList";
+        public const string KubeGroup = "apiregistration.k8s.io";
     }
 
 }

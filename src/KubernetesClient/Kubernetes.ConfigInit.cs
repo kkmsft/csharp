@@ -43,7 +43,7 @@ namespace k8s
             ValidateConfig(config);
             CaCerts = config.SslCaCerts;
             SkipTlsVerify = config.SkipTlsVerify;
-            InitializeFromConfig(config);
+            SetCredentials(config); 
         }
 
         /// <summary>
@@ -66,7 +66,6 @@ namespace k8s
             CaCerts = config.SslCaCerts;
             SkipTlsVerify = config.SkipTlsVerify;
             InitializeFromConfig(config);
-            Console.WriteLine("Uri: {0}", BaseUri.AbsoluteUri.ToString());
         }
 
         private void ValidateConfig(KubernetesClientConfiguration config)
@@ -152,8 +151,9 @@ namespace k8s
                 }
             }
 
-            // set credentails for the kubernernet client
-            SetCredentials(config, HttpClientHandler);
+            // set credentails for the kubernetes client
+            SetCredentials(config);
+            config.AddCertificates(HttpClientHandler);
         }
 
         private X509Certificate2Collection CaCerts { get; }
@@ -196,47 +196,20 @@ namespace k8s
         ///     Set credentials for the Client
         /// </summary>
         /// <param name="config">k8s client configuration</param>
-        /// <param name="handler">http client handler for the rest client</param>
-        /// <returns>Task</returns>
-        private void SetCredentials(KubernetesClientConfiguration config, HttpClientHandler handler)
+        private void SetCredentials(KubernetesClientConfiguration config)
         {
-            Console.WriteLine("Setting credentials!!");
             // set the Credentails for token based auth
             if (!string.IsNullOrWhiteSpace(config.AccessToken))
             {
-                Console.WriteLine("Setting the token creds!!");
                 Credentials = new TokenCredentials(config.AccessToken);
             }
             else if (!string.IsNullOrWhiteSpace(config.Username) && !string.IsNullOrWhiteSpace(config.Password))
             {
-                Console.WriteLine("Setting the basic creds!!");
                 Credentials = new BasicAuthenticationCredentials
                 {
                     UserName = config.Username,
                     Password = config.Password
                 };
-            }
-
-            Console.WriteLine("In set - {0}", Credentials);
-
-#if XAMARINIOS1_0 || MONOANDROID8_1
-            // handle.ClientCertificates is not implemented in Xamarin.
-            return;
-#endif
-
-            if ((!string.IsNullOrWhiteSpace(config.ClientCertificateData) ||
-                    !string.IsNullOrWhiteSpace(config.ClientCertificateFilePath)) &&
-                    (!string.IsNullOrWhiteSpace(config.ClientCertificateKeyData) ||
-                    !string.IsNullOrWhiteSpace(config.ClientKeyFilePath)))
-            {
-                Console.WriteLine("add cert!!");
-                var cert = CertUtils.GeneratePfx(config);
-
-#if NET452
-                ((WebRequestHandler) handler).ClientCertificates.Add(cert);
-#else
-                handler.ClientCertificates.Add(cert);
-#endif
             }
         }
 
