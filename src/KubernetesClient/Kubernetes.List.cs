@@ -1,14 +1,14 @@
-using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Rest;
 using Microsoft.Rest.Serialization;
 using Newtonsoft.Json;
 using System;
+using System.Reflection;
 using System.Collections.Generic;
-using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+
 
 namespace k8s
 {
@@ -19,9 +19,9 @@ namespace k8s
             System.Console.WriteLine("Really is this getting called ?"); 
             // TODO: Wrap around try catch
             
-            var typeO = (T)Activator.CreateInstance(typeof(T));           
+            var typeO = (T)Activator.CreateInstance(typeof(T));              
             var kubeApiVersion = ((String)typeO.GetType().GetProperty("KubeApiVersion").GetValue(typeO, null)).ToLower();
-            var kubeKind = ((String)typeO.GetType().GetProperty("KubeKind").GetValue(typeO, null)).ToLower();
+            var kubeKind = ((String)typeO.GetType().GetProperty("KubeKind").GetValue(typeO, null)).ToLower();            
 
             Console.WriteLine("****> With the reflection - version: {0}, kind: {1}", kubeApiVersion, kubeKind);
             
