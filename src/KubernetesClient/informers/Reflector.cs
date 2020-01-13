@@ -19,55 +19,57 @@ namespace k8s.informers
             _fifo = fifo;
             _fifoEvent = fifoEvent;
         }
-        public void ReflectorWorker(CancellationToken c) 
-        {
-            Console.WriteLine("In the ReflectorWorker");
-            while (!c.IsCancellationRequested) {
-                Console.WriteLine("About to call the lister");
-                var response = _listerWatcher.Lister().Result;
-                Console.WriteLine("Came out");
-                try {
-                    var list = (IList<T>)response.Body.GetType().GetProperty("Items").GetValue(response.Body, null);                
-                    Console.WriteLine("{0}", list);
 
+         /// <summary>
+        /// From the body of http response we get the list objects. List objects are stored "Items" field. Extract this
+        /// and return back as list of objects. 
+        /// TODO: Find a more graceful way to perform this without using reflection.
+        /// </summary>  
+        private IList<T> getItemsAsList(Microsoft.Rest.HttpOperationResponse<L> response) {
+            return (IList<T>)response.Body.GetType().GetProperty("Items").GetValue(response.Body, null);
+        }
+
+        private void reflectorWorker(CancellationToken c) 
+        {       
+            try {            
+                var response = _listerWatcher.Lister().Result;
+                var list = getItemsAsList(response);
                 for (var i=0; i<list.Count; i++) {
-                    var o = (IKubernetesObject)list[i];                                                            
-                    Console.WriteLine("Enqueue");
+                    // Cast the objects from the Items to IKubernetes for adding to store. 
+                    var o = (IKubernetesObject)list[i];                    
                     _fifo.Enqueue(new Tuple<WatchEventType, IKubernetesObject>(WatchEventType.Added, o));
+                    Console.WriteLine("Setting the event");
                     _fifoEvent.Set();
                 }
                 using (_listerWatcher.Watcher(
-                        (type, item) =>
-                                    {
-                                        try {
-                                        Console.WriteLine("==on watch event==");
-                                        Console.WriteLine(type);
-                                        var o = (IKubernetesObject)item;                                                                                                                                                          
-                                        Console.WriteLine("==on watch event==");
-                                        Console.WriteLine("watch Enqueue");
-                                        _fifo.Enqueue(new Tuple<WatchEventType, IKubernetesObject>(type, o));
-                                        _fifoEvent.Set();
-                                        Console.WriteLine("Fifo event set");
-                                        if (c.IsCancellationRequested) return;
-                                        } catch (Exception ex) {
-                                            Console.WriteLine(ex);
-                                        }
-                                    })){                          
-                                       while(!c.IsCancellationRequested) {
-                                            Task.Yield();
-                                        }
-
-                    }
-
-                } catch (Exception ex) {
-                    Console.WriteLine("Caught error: {0}", ex);
-                }
+                    (type, item) =>
+                        {
+                            try {
+                                var o = (IKubernetesObject)item;                                                                                                                                                     
+                                _fifo.Enqueue(new Tuple<WatchEventType, IKubernetesObject>(type, o));
+                                Console.WriteLine("Setting the event"); 
+                                _fifoEvent.Set();
+                            } catch (Exception ex) {                                    
+                                throw ex;
+                            }
+                        })){                          
+                            while(!c.IsCancellationRequested) {                                
+                                Task.Yield();
+                            }
+                            if (c.IsCancellationRequested) {
+                                Console.WriteLine("Cancellation requested. Going out of reflector work loop.");
+                            }
+                }                
+            
+            } catch (Exception ex) {
+                    Console.WriteLine(ex);
+                    throw ex;
             }
         }
 
         public void Run(CancellationToken c)
         {
-            var t = new Task(() => {ReflectorWorker(c);});
+            var t = new Task(() => {reflectorWorker(c);});
             t.Start();            
         }
     }

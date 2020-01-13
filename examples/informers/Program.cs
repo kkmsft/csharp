@@ -13,11 +13,13 @@ namespace informers
         {
      
             var config = KubernetesClientConfiguration.BuildConfigFromConfigFile(Environment.GetEnvironmentVariable("KUBECONFIG"));
+
             IKubernetes client = new Kubernetes(config);
             var lw = new ListerWatcher<V1Pod, V1PodList>(client);
 
             var informer = new SharedInformer<V1Pod, V1PodList>(lw);
-            var cancellationToken = new CancellationToken();
+            var source = new CancellationTokenSource();
+            var cancellationToken = source.Token;
             informer.Run(cancellationToken);            
                
             while(true){
@@ -57,6 +59,8 @@ namespace informers
                         }
                             
                             );
+                    } else if (input == "c") {
+                        source.Cancel();
                     }
                 } catch (Exception e) {
                     Console.WriteLine(e);
