@@ -2,10 +2,10 @@ using System;
 using System.Threading;
 using k8s;
 using k8s.Models;
-using informers;
+using k8s.informers;
 using Newtonsoft.Json;
 
-namespace watch
+namespace informers
 {
     internal class Program
     {
