@@ -1,12 +1,11 @@
 using System;
 using System.Threading;
-using k8s;
-using informers;
+using k8s.cache;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace watch
+namespace k8s.informers
 {
     public class Reflector<T, L>: IReflector<T,L> {
         private ListerWatcher<T,L> _listerWatcher;

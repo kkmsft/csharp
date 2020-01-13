@@ -1,10 +1,9 @@
 using System.Threading;
 
-namespace watch
+namespace k8s.informers
 {
     public interface IReflector<T,L> {
         void Run(CancellationToken c);
-
     }
 }
 

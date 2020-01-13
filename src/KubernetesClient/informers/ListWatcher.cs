@@ -1,16 +1,10 @@
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Rest;
-using Microsoft.Rest.Serialization;
-using System.Net;
-using System.Net.Http;
-using Newtonsoft.Json;
 using k8s;
-using k8s.Models;
 using System;
 
-namespace informers
+namespace k8s.informers
 {    
     public delegate Task<HttpOperationResponse<L>> ListerD<T, L>();
     public delegate Watcher<T> WatcherD<T, L>(Action<WatchEventType, T> onEvent, Action<Exception> onError = null, Action onClosed = null);

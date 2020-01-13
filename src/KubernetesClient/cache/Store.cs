@@ -1,15 +1,14 @@
 using System;
-using k8s;
 using k8s.Models;
 using System.Collections.Generic;
+using System.Reflection;
 
-namespace watch
+namespace k8s.cache
 {
     public class Store : IStore
     {
         private IThreadSafeStore _threadSafeStorage;
         private Func<IKubernetesObject, string> _metaNamespaceFunc;
-
         public string MetaNamespaceKeyFunc(IKubernetesObject o) 
         {
             try {

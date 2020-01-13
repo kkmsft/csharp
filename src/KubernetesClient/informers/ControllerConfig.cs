@@ -1,9 +1,8 @@
 using System;
-using k8s;
-using informers;
 using System.Collections.Generic;
+using k8s.cache;
 
-namespace watch
+namespace k8s.informers
 {
     public class ControllerConfig<T, L> {
         public Queue<Tuple<WatchEventType, IKubernetesObject>> Fifo;

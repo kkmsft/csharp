@@ -1,8 +1,7 @@
 using System;
-using k8s;
 using System.Collections.Generic;
 
-namespace watch
+namespace k8s.cache
 {
     public interface IStore {
         void Add(IKubernetesObject o);

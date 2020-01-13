@@ -1,8 +1,7 @@
 using System;
-using k8s;
 using System.Collections.Generic;
 
-namespace watch
+namespace k8s.cache
 {
     interface IThreadSafeStore {
         void Add(string key, IKubernetesObject value);

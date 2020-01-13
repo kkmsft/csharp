@@ -1,10 +1,9 @@
 using System;
 using System.Threading;
-using k8s;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace watch
+namespace k8s.cache
 {
     public class ThreadSafeStore : IThreadSafeStore
     {
@@ -46,7 +45,8 @@ namespace watch
         public IKubernetesObject Get(string key)
         {
             _storageLock.WaitOne();
-            var v = _store.GetValueOrDefault(key);            
+            IKubernetesObject v;
+            v = _store.TryGetValue(key,out v)? v : null;           
             _storageLock.ReleaseMutex(); 
             return v;            
         }

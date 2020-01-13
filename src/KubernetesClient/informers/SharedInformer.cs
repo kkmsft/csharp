@@ -1,9 +1,8 @@
 using System;
 using System.Threading;
-using k8s;
-using informers;
+using k8s.cache;
 
-namespace watch
+namespace k8s.informers
 {
     public class SharedInformer<T, L> : ISharedInformer<T, L>
     {

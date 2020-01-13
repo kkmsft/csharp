@@ -1,11 +1,10 @@
 using System;
 using System.Threading;
-using k8s;
-using informers;
+using k8s.cache;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace watch
+namespace k8s.informers
 {
     public class Controller<T, L> : IController<T, L>
     {
